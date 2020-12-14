@@ -1,10 +1,10 @@
 from django.db import models
 
 
-class BlogEntry(models.Model):
+class TechEntry(models.Model):
     title = models.CharField(max_length=200)
-    pub_date = models.DateField(auto_now=True)
-    body = models.TextField()
+    tech_used = models.TextField()
+    description = models.TextField()
     image = models.ImageField(upload_to='images')
 
     def summary(self):
