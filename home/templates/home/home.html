@@ -53,9 +53,15 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">
-                  <a class="nav-link" href="#">Twitter</a>
-                  <a class="nav-link" href="{% static 'resume.pdf'%}">CV</a>
-                  <a class="nav-link" href="">Blog</a>
+                  <a class="nav-link" href="http://github.com/simt33/" target="_blank">
+                      <img class="img-fluid" src= "{% static 'gh_logo.jpeg' %}" height=40 width=40 style="border-radius: 50%">
+                  </a>
+                  <a class="nav-link" href="https://www.linkedin.com/in/simon-tunmore-101834159/" target="_blank">
+                      <img class="img-fluid" src= "{% static 'linkedin_logo.jpeg' %}" height=40 width=40 style="border-radius: 50%">
+                  </a>
+                  <a class="nav-link" href="{% static 'resume.pdf'%}" target="_blank">
+                      <img class="img-fluid" src= "{% static 'cv_logo.jpeg' %}" height=40 width=40 style="border-radius: 50%">
+                  </a>
               </div>
           </div>
       </nav>
@@ -80,21 +86,32 @@
 
         <div class="row">
 
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm" >
                     <a href="{% url 'jobs' %}" >
-                        <img class="card-img-top" src="{% static 'career_icon.jpeg' %}" style="padding-top: 30px; padding-right: 100px; padding-bottom: 0px; padding-left: 100px;" />
+                        <img class="card-img-top" src="{% static 'career_icon.jpeg' %}" style="padding-top: 30px; padding-right: 60px; padding-bottom: 0px; padding-left: 60px;" />
                     </a>
                     <div class="card-body">
-                        <p class="card-text" style="text-align:center; font-size:135%"> Bio & Career </p>
+                        <p class="card-text" style="text-align:center; font-size:135%"> Story & Skills </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card mb-4 shadow-sm">
+                    <a href="{% url 'jobs' %}" >
+                        <img class="card-img-top" src="{% static 'career_icon.jpeg' %}" style="padding-top: 30px; padding-right: 60px; padding-bottom: 0px; padding-left: 60px;" />
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text" style="text-align:center; font-size:135%"> Career & Education </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm" >
                     <a href="{% url 'tech' %}" >
-                        <img class="card-img-top" src="{% static 'tech_icon.jpeg' %}" style="padding-top: 30px; padding-right: 100px; padding-bottom: 0px; padding-left: 100px;" />
+                        <img class="card-img-top" src="{% static 'tech_icon.jpeg' %}" style="padding-top: 30px; padding-right: 60px; padding-bottom: 0px; padding-left: 60px;" />
                     </a>
                     <div class="card-body">
                         <p class="card-text" style="text-align:center; font-size:135%"> Technical Projects </p>
@@ -102,10 +119,10 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card mb-4 shadow-sm">
                     <a href="{% url 'tech' %}" >
-                        <img class="card-img-top" src="{% static 'hobby_icon.jpeg' %}" style="padding-top: 30px; padding-right: 100px; padding-bottom: 0px; padding-left: 100px;" />
+                        <img class="card-img-top" src="{% static 'hobby_icon.jpeg' %}" style="padding-top: 30px; padding-right: 60px; padding-bottom: 0px; padding-left: 60px;" />
                     </a>
                     <div class="card-body" style="text-align:center; font-size:135%">
                         <p class="card-text"> Music, Language & Other </p>
