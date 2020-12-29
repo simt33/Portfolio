@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Simon Tunmore">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Simon Tunmore · Technical Projects</title>
+    <title>Simon Tunmore · Other Interests</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
@@ -41,12 +41,13 @@
           font-size: 3.5rem;
         }
       }
+
       .center {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 50%;
-    }
+        }
     </style>
 
 </head>
@@ -75,30 +76,14 @@
 
 <main role="main">
     <div class="container">
-        <h1 class="text-center pt-3">Technical Portfolio</h1>
-        <br/>
-        <br/>
-        <h2>Recent Technical Projects</h2>
+<br/>
+        <h1 style="text-align:center"> Other Interests </h1>
         <hr/>
-        {% for tech in tech_entries.all %}
-
-
-        <div class="row">
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <p class="card-text "> <a href = "{% url 'detail' tech.id%}"> <b>{{tech.title}}</b> </a> </p>
-                    <img class="img-fluid" src="{{ tech.image.url }}" height=200 width=200/>
-                    <p class="card-text pt-3"> {{blog.summary}} </p>
-                </div>
-            </div>
-        </div>
-
-        {% endfor %}
-        <br/>
+        <div>
         <img src="{% static 'under_construction.jpg' %}" height=250 class="center"/>
+        </div>
         <br/>
-    </div>
-
+ </div>
 </main>
 
 <footer class="text-muted">
