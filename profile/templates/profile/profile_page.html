@@ -53,6 +53,12 @@
     grid-gap: 20px;
 }
 
+.education-grid-container {
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-gap: 20px;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -112,7 +118,9 @@
             <hr/>
             <br/>
 
-            <div class="tab-content" id="pills-tabContent" style="padding-left:2%; padding-right:2%; padding-top:2%; padding-bottom:3%">
+            <div class="tab-content" id="pills-tabContent" style="padding-left:2%; padding-right:2%; padding-bottom:3%">
+
+
                 <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                     <div class="container">
                         <div class="row">
@@ -122,7 +130,7 @@
                                 </div>
                                 <div class="grid-child" style="margin:auto; ">
                                     <p style="font-size:17px;color:dark grey; margin:auto; text-justify:inter-word"><i>
-                                        A highly collaborative, ambitious and adaptable individual with a broad applied skillset across technology, language and music. Highly proficient in a number of data and development technologies, speaks three languages, plays 6 instruments, with degrees from Durham and Warwick Universities and a successful career history spanning education, recruitment and data, both in the UK and abroad. Having spent the last 10 years seeking out data problems alongside his primary roles, Simon is now looking for a new fully data-centric position as a data analyst or engineer, where he can solely focus on adding business value through improving data systems.</i>
+                                        A highly collaborative, proactive and adaptable individual with a broad applied skillset across technology, language and music. Highly proficient in a number of data and development technologies, speaks three languages, plays 6 instruments, with degrees from Durham and Warwick Universities and a successful career history spanning education, recruitment and data, both in the UK and abroad. Having spent the last 10 years seeking out data problems alongside his primary roles, Simon is now looking for a new fully data-centric position as a data analyst or engineer, where he can solely focus on adding business value through improving data systems.</i>
                                     </p>
 
                                 </div>
@@ -157,7 +165,7 @@
                             <div class="grid-child">
                                 <h4>Communication</h4>
                                 <p>
-                                    More than any other skill, I pride myself on my strong verbal and written communication skills. This has been the bedrock of my career so far, and has allowed me to excel in a number of areas such as effective teamwork, leadership, conflict resolution and public speaking.
+                                    Strong verbal and written communication skills have been the bedrock of my career so far, allowing me to excel in a number of areas such as effective teamwork, leadership, conflict resolution and public speaking.
                                 </p>
                                 <ul>
                                     <li>Skilled in building and maintaining positive relationships; highly collaborative</li>
@@ -240,7 +248,6 @@
                         </div>
                     </div>
                 </div>
-
 
 
                 <div class="tab-pane fade" id="technical" role="tabpanel" aria-labelledby="technical-tab">
@@ -332,19 +339,90 @@
                     <br/>
                     <p>If you'd like to find out more about how I've used each of the above technologies within various projects, please visit my <a href="" target="_blank">Technical Portfolio</a>.</p>
                 </div>
+
+
                 <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
                     <img class="img-fluid" src="{% static 'U_C.jpg' %}"/>
                     <br/>
                 </div>
+
+
                 <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
-                    <img class="img-fluid" src="{% static 'U_C.jpg' %}"/>
-                    <br/>
+
+                    <div class="card mb-4 shadow-sm" style="padding-left:4%; padding-right:4%; padding-top:2%; padding-bottom:2%">
+                        <div class="education-grid-container">
+                            <div class = "grid-child">
+                                <img class="img-fluid" src= "{% static 'Cranleigh_logo.png' %}" height=1000 width=1000/>
+                            </div>
+                            <div class="grid-child" style="margin:auto; margin-left:5%; text-align:left">
+                                <h5 style="text-align:left"><b>Cranleigh School</b></h5>
+                                <h6 style="text-align:left">A-Levels: Maths (A), Economics (A), French (A)</h6>
+                                <h6 style="text-align:left">GCSEs: 10 A/A* </h6>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card mb-4 shadow-sm" style="padding-left:4%; padding-right:4%; padding-top:2%; padding-bottom:2%">
+                        <div class="education-grid-container">
+                            <div class = "grid-child">
+                                <img class="img-fluid" src= "{% static 'Durham_logo.png' %}" height=1000 width=1000/>
+                            </div>
+                            <div class="grid-child" style="margin:auto; margin-left:5%; text-align:left">
+                                <h5 style="text-align:left"><b>Economics with French (BA)</b></h5>
+                                <h5>Durham University (2005-2009)</h5>
+                                <h6 style="text-align:left">Second Class Honours</h6>
+                                <p style="text-align:left"><i>Econometrics, Micro & Macroeconomics, Corporate Finance, European Economics. Including 3rd year studying abroad under ERASMUS exchange scheme (below). </i></p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm" style="padding-left:4%; padding-right:4%; padding-top:2%; padding-bottom:2%">
+                            <div class="education-grid-container" style="grid-template-columns: 0.3fr 1.7fr;">
+                                <div class = "grid-child">
+                                    <img class="img-fluid" src= "{% static 'Aix_logo.png' %}" height=600 width=600 />
+                                </div>
+                                <div class="grid-child" style="margin:auto; margin-left:5%; text-align:left ;">
+                                    <h6 style="text-align:left">Economie et Géstion (Economics and Management)</h6>
+                                    <h6>Université de la Mediterranée (2008)</h6>
+                                    <h7 style="text-align:left">ERASMUS exchange scheme</h7>
+                                    <p style="text-align:left"><i>Living, working and studying in Aix-en-Provence, France.</i></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm" style="padding-left:4%; padding-right:4%; padding-top:2%; padding-bottom:2%">
+                        <div class="education-grid-container">
+                            <div class = "grid-child">
+                                <img class="img-fluid" src= "{% static 'Warwick_logo.png' %}" height=1000 width=1000/>
+                            </div>
+                            <div class="grid-child" style="margin:auto; margin-left:5%; text-align:left">
+                                <h5 style="text-align:left"><b>PGCE Secondary Education</b></h5>
+                                <h5>University of Warwick (2009-2010)</h5>
+                                <p style="text-align:left"><i>Postgraduate Certificate in Education - specialism in Modern Foreign Languages (French & Spanish). Included work placements in 2 local schools. </i></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card mb-4 shadow-sm" style="padding-left:4%; padding-right:4%; padding-top:2%; padding-bottom:2%">
+                        <div class="education-grid-container">
+                            <div class = "grid-child">
+                                <img class="img-fluid" src= "{% static 'Kingston_logo.jpg' %}" height=1000 width=1000/>
+                            </div>
+                            <div class="grid-child" style="margin:auto; margin-left:5%; text-align:left">
+                                <h5 style="text-align:left"><b>Professional Studies in Education (MA)</b></h5>
+                                <h5>Kingston University (2010-2013)</h5>
+                                <h6 style="text-align:left">with Commendation</h6>
+                                <p style="text-align:left"><i>Dissertation title: "An investigation into teacher attitudes towards and use of Web 2.0 technologies as a remote teaching tool."</i></p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-            </div>
 
-        </div>
-
-        <br/>
+                <br/>
 </main>
 
 <footer class="text-muted">
