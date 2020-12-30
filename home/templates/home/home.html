@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
+      <meta name="pinterest" content="nopin" />
     <title>Simon Tunmore · Portfolio</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
@@ -41,12 +42,20 @@
           font-size: 3.5rem;
         }
       }
+      a { color: inherit; }
+
+      a:hover
+{
+     color:#3E6FA2;
+     text-decoration:none;
+     cursor:pointer;
+}
     </style>
 
   </head>
   <body>
   <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
           <a class="navbar-brand" href="{% url 'home' %}">Simon Tunmore</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -69,7 +78,7 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
+  <section class="jumbotron text-center bg-light" >
     <div class="container">
       <h1>Simon Tunmore</h1>
       <p class="lead text-muted">Tech-enabled people person: <br/> Developer, Recruiter, Linguist, Educator, Public Speaker and Music Producer</p>
@@ -79,7 +88,9 @@
       </p>
         <img src="{% static 'Simon_square.jpeg' %}" height=300 width=300 style="border-radius: 50%"/>
     </div>
-  </section>
+<br/>
+      <br/>
+      <hr/>
 
   <div class="album py-5 bg-light">
     <div class="container">
@@ -87,37 +98,43 @@
         <div class="row">
 
             <div class="col-md-4">
+                <a href="{% url 'profile' %}" >
                 <div class="card mb-4 shadow-sm" >
-                    <a href="{% url 'profile' %}" >
-                        <img class="card-img-top" src="{% static 'career_icon.jpeg' %}" style="padding-top: 30px; padding-right: 100px; padding-bottom: 0px; padding-left: 100px;" />
-                    </a>
+                        <img class="card-img-top" src="{% static 'career_icon.jpeg' %}" style="padding-top: 8%; padding-right: 30%; padding-bottom: 0px; padding-left: 30%;" />
+
                     <div class="card-body">
                         <p class="card-text" style="text-align:center; font-size:135%"> Profile & Skills </p>
                     </div>
+
                 </div>
+                </a>
             </div>
 
 
             <div class="col-md-4">
+                <a href="{% url 'tech' %}" >
                 <div class="card mb-4 shadow-sm" >
-                    <a href="{% url 'tech' %}" >
-                        <img class="card-img-top" src="{% static 'tech_icon.jpeg' %}" style="padding-top: 30px; padding-right: 100px; padding-bottom: 0px; padding-left: 100px;" />
-                    </a>
+
+                        <img class="card-img-top" src="{% static 'tech_icon.jpeg' %}" style="padding-top: 8%; padding-right: 30%; padding-bottom: 0px; padding-left: 30%;" />
+
                     <div class="card-body">
                         <p class="card-text" style="text-align:center; font-size:135%"> Technical Projects </p>
                     </div>
+
                 </div>
+                </a>
             </div>
 
             <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <a href="{% url 'other_interests' %}" >
-                        <img class="card-img-top" src="{% static 'hobby_icon.jpeg' %}" style="padding-top: 30px; padding-right: 100px; padding-bottom: 0px; padding-left: 100px;" />
-                    </a>
+                <a href="{% url 'other_interests' %}" ><div class="card mb-4 shadow-sm">
+
+                        <img class="card-img-top" src="{% static 'hobby_icon.jpeg' %}" style="padding-top: 8%; padding-right: 30%; padding-bottom: 0px; padding-left: 30%;" />
+
                     <div class="card-body" style="text-align:center; font-size:135%">
                         <p class="card-text"> Music, Language & Other </p>
                     </div>
                 </div>
+                </a>
             </div>
 
 
@@ -125,7 +142,7 @@
       </div>
     </div>
   </div>
-
+      </section>
 </main>
 
 <footer class="text-muted">
