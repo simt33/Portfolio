@@ -51,12 +51,14 @@
      cursor:pointer;
 }
 
+
 body {
     background: url('{% static 'bg_homepage.png' %}') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100%;
 }
 
 .home-grid-container {
@@ -71,6 +73,7 @@ body {
     margin:0 auto;
     display: block;
     text-align: center;
+    padding-right:7%
 }
 
 .navbar-nav > li {
@@ -85,24 +88,24 @@ body {
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Simon Tunmore</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Me</a>
+                    <a class="nav-link" href="{% url 'profile' %}">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Technical Portfolio</a>
+                    <a class="nav-link" href="{% url 'tech' %}">Technical Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Everything Else</a>
+                    <a class="nav-link" href="{% url 'other_interests' %}">Everything Else</a>
                 </li>
 
 
@@ -114,19 +117,17 @@ body {
 
 <main role="main">
 
-
+<div class ="container">
         <div class="container text-center" style="margin:auto;">
-            <div class="card mb-4" style="width:60%"; align="center">
-                <h1>Simon Tunmore</h1>
+
+
+            <img src="{% static 'Simon_img.jpeg' %}" height=300 width=300 style="border-radius:50%"/>
+            <div class="card bg-light";>
+                <h2>Simon Tunmore</h2>
                 <p class="lead text-muted">Tech-enabled people person: <br/> Developer, Recruiter, Linguist, Educator, Public Speaker and Music Producer</p>
-                <p>
-                    <a href="mailto:simt33@yahoo.co.uk" class="btn btn-primary my-2">Email Me</a>
-                </p>
+
             </div>
-
-            <img src="{% static 'Simon_img.jpeg' %}" height=300 width=300 style="border-radius: 30%"/>
-
-
+</div>
         </div>
         <br/>
         <br/>
@@ -184,11 +185,11 @@ body {
 
 </main>
 
-<footer class="text-muted" style="height:50px">
+<!--<footer class="text-muted" style="height:50px">
     <div class="container text-center">
         <p>&copy; Simon Tunmore {% now "Y" %}</p>
     </div>
-</footer>
+</footer>-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
