@@ -28,6 +28,8 @@
 
 
     <style>
+
+    <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -42,35 +44,90 @@
           font-size: 3.5rem;
         }
       }
+      a { color: inherit; }
 
-      .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        }
+      a:hover
+{
+     color:#3E6FA2;
+     text-decoration:none;
+     cursor:pointer;
+}
+
+
+body {
+    background: url('{% static 'bg_homepage.png' %}') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.home-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+@media (min-width: 768px) {
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+    padding-right:7%
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+.center-frame {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
     </style>
 
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'home' %}">Simon Tunmore</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-link" href="http://github.com/simt33/" target="_blank">
-                    <img class="img-fluid" src= "{% static 'gh_logo.jpeg' %}" height=40 width=40 style="border-radius: 50%">
-                </a>
-                <a class="nav-link" href="https://www.linkedin.com/in/simon-tunmore-101834159/" target="_blank">
-                    <img class="img-fluid" src= "{% static 'linkedin_logo.jpeg' %}" height=40 width=40 style="border-radius: 50%">
-                </a>
-                <a class="nav-link" href="{% static 'resume.pdf'%}" target="_blank">
-                    <img class="img-fluid" src= "{% static 'cv_logo.jpeg' %}" height=40 width=40 style="border-radius: 50%">
-                </a>
-            </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'tech' %}">Technical Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'other_interests' %}">Everything Else</a>
+                </li>
+
+
+            </ul>
+
         </div>
     </nav>
 </header>

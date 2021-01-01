@@ -82,13 +82,28 @@ body {
 }
 }
 
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+.center-frame {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
     </style>
 
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Simon Tunmore</a>
+    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+        <a class="navbar-brand" href="{% url 'home' %}">Simon Tunmore</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -117,71 +132,72 @@ body {
 
 <main role="main">
 
-<div class ="container">
-        <div class="container text-center" style="margin:auto;">
+    <div class ="container">
+        <div class="center" style="max-width:15%; background: rgba(0, 0, 0, 0.8)" >
+
+            <a href="{% url 'profile' %}" style="margin-left: auto;
+  margin-right: auto; display:block;">
+                <img  class ="center" src="{% static 'ST_logo.png' %}" height=300 width=300>
+            </a>
 
 
-            <img src="{% static 'Simon_img.jpeg' %}" height=300 width=300 style="border-radius:50%"/>
-            <div class="card bg-light";>
-                <h2>Simon Tunmore</h2>
-                <p class="lead text-muted">Tech-enabled people person: <br/> Developer, Recruiter, Linguist, Educator, Public Speaker and Music Producer</p>
 
-            </div>
-</div>
+
         </div>
-        <br/>
-        <br/>
+    </div>
+    <br/>
+    <br/>
 
-        <!--<div class="album py-5 bg-light">
-            <div class="container">
+    <!--<div class="album py-5 bg-light">
+        <div class="container">
 
-                <div class="row">
+            <div class="row">
 
-                    <div class="col-md-4">
-                        <a href="{% url 'profile' %}" >
-                            <div class="card mb-4 shadow-sm" >
-                                <img class="card-img-top" src="{% static 'career_icon.jpeg' %}" style="padding-top: 8%; padding-right: 30%; padding-bottom: 0px; padding-left: 30%;" />
+                <div class="col-md-4">
+                    <a href="{% url 'profile' %}" >
+                        <div class="card mb-4 shadow-sm" >
+                            <img class="card-img-top" src="{% static 'career_icon.jpeg' %}" style="padding-top: 8%; padding-right: 30%; padding-bottom: 0px; padding-left: 30%;" />
 
-                                <div class="card-body">
-                                    <p class="card-text" style="text-align:center; font-size:135%"> Profile & Skills </p>
-                                </div>
-
+                            <div class="card-body">
+                                <p class="card-text" style="text-align:center; font-size:135%"> Profile & Skills </p>
                             </div>
-                        </a>
-                    </div>
 
-
-                    <div class="col-md-4">
-                        <a href="{% url 'tech' %}" >
-                            <div class="card mb-4 shadow-sm" >
-
-                                <img class="card-img-top" src="{% static 'tech_icon.jpeg' %}" style="padding-top: 8%; padding-right: 30%; padding-bottom: 0px; padding-left: 30%;" />
-
-                                <div class="card-body">
-                                    <p class="card-text" style="text-align:center; font-size:135%"> Technical Projects </p>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-4">
-                        <a href="{% url 'other_interests' %}" ><div class="card mb-4 shadow-sm">
-
-                            <img class="card-img-top" src="{% static 'hobby_icon.jpeg' %}" style="padding-top: 8%; padding-right: 30%; padding-bottom: 0px; padding-left: 30%;" />
-
-                            <div class="card-body" style="text-align:center; font-size:135%">
-                                <p class="card-text"> Music, Language & Other </p>
-                            </div>
                         </div>
-                        </a>
-                    </div>
-
-
-
+                    </a>
                 </div>
+
+
+                <div class="col-md-4">
+                    <a href="{% url 'tech' %}" >
+                        <div class="card mb-4 shadow-sm" >
+
+                            <img class="card-img-top" src="{% static 'tech_icon.jpeg' %}" style="padding-top: 8%; padding-right: 30%; padding-bottom: 0px; padding-left: 30%;" />
+
+                            <div class="card-body">
+                                <p class="card-text" style="text-align:center; font-size:135%"> Technical Projects </p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="{% url 'other_interests' %}" ><div class="card mb-4 shadow-sm">
+
+                        <img class="card-img-top" src="{% static 'hobby_icon.jpeg' %}" style="padding-top: 8%; padding-right: 30%; padding-bottom: 0px; padding-left: 30%;" />
+
+                        <div class="card-body" style="text-align:center; font-size:135%">
+                            <p class="card-text"> Music, Language & Other </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+
+
             </div>
-        </div> -->
+        </div>
+    </div> -->
 
 </main>
 
