@@ -9,7 +9,7 @@
     <meta name="author" content="Simon Tunmore">
     <meta name="generator" content="Jekyll v4.1.1">
     <meta name="pinterest" content="nopin" />
-    <title>Simon Tunmore · Profile & Skills</title>
+    <title>Simon Tunmore · About</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
@@ -86,9 +86,16 @@
     .tech-grid-container
         {
             display: grid;
-            grid-template-columns: 0.1fr 1.9fr;
+            grid-template-columns: 1.9fr 0.1fr;
             grid-gap: 20px;
         }
+
+        .techskills-grid-container
+    {
+        display: grid;
+        grid-template-columns: 0.1fr 1.9fr;
+        grid-gap: 20px;
+    }
 
     .overview-grid-container
         {
@@ -178,8 +185,6 @@
 <br/>
 <main role="main">
     <section class="jumbotron bg-white" style="padding-left:4%; padding-right:4%; padding-top:2%; padding-bottom:3%; width:95%; margin:auto">
-        <h2 class="text-center pt-3 text-black">Profile & Skills</h2>
-        <br/>
 
 
         <div class="container">
@@ -309,20 +314,21 @@
     <hr/>
     <br/>
 
-    <div class= "rounded" style="margin:auto; max-width:1000px; background: rgba(300, 300, 300, 0.2)">
+    <div class= "rounded" style="margin:auto; max-width:1000px; background: #333333">
         <br/>
 
-        <div class = "card rounded" style = "width:95%; margin:auto; background: #FFFFFF">
-        <h1 style="text-align:center">Technical Skills</h1>
+        <div class = "card rounded" style = "width:95%; margin:auto; background: rgba(23, 23, 23, 0)">
+            <h1 style="text-align:center; color:white">Technical Skills</h1>
         </div>
         <br/>
-        <div class = "card rounded" style = "width:95%; margin:auto; background: #FFFFFF; border-left: 20px solid #EF875A;">
-            <div class ="tech-grid-container" style = "padding-left:3%;padding-top:3%;padding-bottom:3%; padding-right:3%">
-                <div class="grid-child">
-                    <img src= "{% static 'ts_high.png' %}" height=35 width=35/>
-                </div>
-                <div class="grid-child" >
+        <div class = "card rounded" style = "width:95%; margin:auto; background: #FFFFFF; padding-bottom:10px; padding-right:3%;border-left: 20px solid #EF875A;">
+            <div class ="tech-grid-container" style = "padding-left:3%;padding-top:2%;padding-bottom:2%; padding-right:3%">
+
+                <div class="grid-child" style="padding-top:5px" >
                     <h4>Advanced</h4>
+                </div>
+                <div class="grid-child">
+                    <img src= "{% static 'ts_high.png' %}" height=45 width=45/>
                 </div>
             </div>
             <ul>
@@ -336,13 +342,14 @@
 
 
         <br/>
-        <div class = "card rounded" style = "width:95%; margin:auto; padding-right:3%; border-left: 10px solid #EF875A; ">
-            <div class ="tech-grid-container" style = "padding-left:3%;padding-top:3%;padding-bottom:3%; padding-right:3%">
-                <div class="grid-child">
-                    <img src= "{% static 'ts_mid.png' %}" height=35 width=35/>
+        <div class = "card rounded" style = "width:95%; margin:auto; padding-right:3%; padding-bottom:10px; border-left: 10px solid #EF875A; ">
+            <div class ="tech-grid-container" style = "padding-left:3%;padding-top:2%;padding-bottom:2%; padding-right:3%">
+                <div class="grid-child" style="padding-top:5px">
+                    <h4>Intermediate</h4>
                 </div>
                 <div class="grid-child">
-                    <h4>Intermediate</h4> </div>
+                    <img src= "{% static 'ts_mid.png' %}" height=45 width=45/>
+                </div>
             </div>
             <ul>
                 <li><b>Python (Data Science)</b> - scikit-learn (Linear/Logistic Regression, KNN, Random Forests) </li>
@@ -356,13 +363,16 @@
         </div>
 
         <br/>
-        <div class = "card rounded" style = "width:95%; margin:auto; padding-right:3%; border-left: 5px solid #EF875A;">
-            <div class ="tech-grid-container" style = "padding-left:3%;padding-top:3%;padding-bottom:3%;padding-right:3%">
-                <div class="grid-child">
-                    <img src= "{% static 'ts_low.png' %}" height=35 width=35/>
+        <div class = "card rounded" style = "width:95%; margin:auto; padding-right:3%; padding-bottom:10px; border-left: 5px solid #EF875A;">
+            <div class ="tech-grid-container" style = "padding-left:3%;padding-top:2%;padding-bottom:2%;padding-right:3%;">
+
+                <div class="grid-child" style="padding-top:5px;">
+                    <h4>
+                        Basic
+                    </h4>
                 </div>
                 <div class="grid-child">
-                    <h4>Basic</h4>
+                    <img src= "{% static 'ts_low.png' %}" height=45 width=45/>
                 </div>
             </div>
             <ul>
@@ -372,41 +382,49 @@
             </ul>
         </div>
         <br/>
-    </div>
-    <hr/>
-    <br/>
-    <div class ="tech-grid-container">
-        <div class="grid-child">
-            <img class="img-fluid" src= "{% static 'MS_logo.png' %}" height=100 width=100/>
-        </div>
-        <div class="grid-child">
-            <h5>70-761: Querying Data with Transact-SQL</h5>
-            <ul style="list-style-type:none; ">
-                <li><b>Issuing Body:</b> Microsoft </li>
-                <li><b>Awarded:</b> October 2020</li>
-                <li><b>Level:</b> Advanced</li>
-                <li><b>Context:</b> 150-minute exam</li>
-                <li><b>Key skills tested:</b> Complex queries, aggregate and window functions, joins, stored procedure creation and maintenance, user-defined functions, recursive functions, CTEs, temporary and temporal tables. <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4tiOm" target="_blank">Full details</a></li>
 
-            </ul>
-        </div>
-    </div>
-    <br/>
-    <div class ="tech-grid-container">
-        <div class="grid-child">
-            <img class="img-fluid" src= "{% static 'Tableau_logo.png' %}" height=1000 width=1000/>
-        </div>
-        <div class="grid-child">
-            <h5>Tableau Certified Associate</h5>
-            <ul style="list-style-type:none; ">
-                <li><b>Issuing Body:</b> Tableau </li>
-                <li><b>Awarded:</b> November 2020</li>
-                <li><b>Level:</b> Advanced</li>
-                <li><b>Context:</b> 120-minute exam</li>
-                <li><b>Key skills tested:</b> Data Connections & preparation, joins/blending, groups & sets, hierarchies, Dashboarding, Stories, Table Calculations & LOD expressions, auto and custom mapping for geometric data, graph design, Advanced Analytics (trends, IQRs, linear forecasting, reference bands). <a href="https://mkt.tableau.com/files/DesktopCA_ExamGuide.pdf" target="_blank">Full details</a> </li>
+        <hr/>
+        <br/>
+        <div class = "card rounded" style = "width:95%; margin:auto; padding-right:3%; padding-bottom:10px; border-left: 10px solid #D1F4FF;">
+            <div class ="techskills-grid-container" style = "padding-left:3%;padding-top:3%;padding-bottom:1%;padding-right:3%">
+                <div class="grid-child">
+                    <img class="img-fluid" src= "{% static 'MS_logo.png' %}" height=100 width=100/>
+                </div>
+                <div class="grid-child">
+                    <h5>70-761: Querying Data with Transact-SQL</h5>
+                    <ul style="list-style-type:none; ">
+                        <li><b>Issuing Body:</b> Microsoft </li>
+                        <li><b>Awarded:</b> October 2020</li>
+                        <li><b>Level:</b> Advanced</li>
+                        <li><b>Context:</b> 150-minute exam</li>
+                        <li><b>Key skills tested:</b> Complex queries, aggregate and window functions, joins, stored procedure creation and maintenance, user-defined functions, recursive functions, CTEs, temporary and temporal tables. <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4tiOm" target="_blank">Full details</a></li>
 
-            </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class ="techskills-grid-container" style = "padding-left:3%;padding-top:3%;padding-bottom:1%;padding-right:3%">
+                <div class="grid-child">
+                    <img class="img-fluid" src= "{% static 'Tableau_logo.png' %}" height=1000 width=1000/>
+                </div>
+                <div class="grid-child">
+                    <h5>Tableau Certified Associate</h5>
+                    <ul style="list-style-type:none; ">
+                        <li><b>Issuing Body:</b> Tableau </li>
+                        <li><b>Awarded:</b> November 2020</li>
+                        <li><b>Level:</b> Advanced</li>
+                        <li><b>Context:</b> 120-minute exam</li>
+                        <li><b>Key skills tested:</b> Data Connections & preparation, joins/blending, groups & sets, hierarchies, Dashboarding, Stories, Table Calculations & LOD expressions, auto and custom mapping for geometric data, graph design, Advanced Analytics (trends, IQRs, linear forecasting, reference bands). <a href="https://mkt.tableau.com/files/DesktopCA_ExamGuide.pdf" target="_blank">Full details</a> </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
         </div>
+        <br/>
     </div>
     <br/>
     <p>If you'd like to find out more about how I've used each of the above technologies within various projects, please visit my <a href="" target="_blank">Technical Portfolio</a>.</p>
