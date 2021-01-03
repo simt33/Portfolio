@@ -29,7 +29,53 @@
 
     <style>
 
-    <style>
+    body {
+        background: url('{% static 'bg_homepage.png' %}') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100%;
+}
+
+    .home-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+}
+
+    @media (min-width: 768px) {
+    .navbar-nav {
+        float:none;
+        margin:0 auto;
+        display: block;
+        text-align: center;
+        padding-right:7%
+}
+
+    .navbar-nav > li {
+        display: inline-block;
+        float:none;
+}
+}
+
+      a { color: inherit; }
+
+      a:hover
+{
+     color:#3E6FA2;
+     text-decoration:none;
+     cursor:pointer;
+}
+
+
+    .center-frame {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+}
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -44,61 +90,12 @@
           font-size: 3.5rem;
         }
       }
-      a { color: inherit; }
-
-      a:hover
-{
-     color:#3E6FA2;
-     text-decoration:none;
-     cursor:pointer;
-}
-
-
-body {
-    background: url('{% static 'bg_homepage.png' %}') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-}
-
-.home-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
-@media (min-width: 768px) {
-.navbar-nav {
-    float:none;
-    margin:0 auto;
-    display: block;
-    text-align: center;
-    padding-right:7%
-}
-
-.navbar-nav > li {
-    display: inline-block;
-    float:none;
-}
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-.center-frame {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
     </style>
 
 </head>
@@ -112,7 +109,7 @@ body {
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -121,7 +118,7 @@ body {
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'tech' %}">Technical Portfolio</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="{% url 'other_interests' %}">Everything Else</a>
                 </li>
 
@@ -134,14 +131,30 @@ body {
 
 <main role="main">
     <div class="container">
-<br/>
-        <h1 style="text-align:center"> Other Interests </h1>
-        <hr/>
-        <div>
-        <img src="{% static 'U_C.jpg' %}" class="center"/>
-        </div>
+        <h1 class="text-center pt-3">Other Interests</h1>
         <br/>
- </div>
+        <br/>
+        <h2>   </h2>
+        <hr/>
+        {% for tech in tech_entries.all %}
+
+
+        <div class="row">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <p class="card-text "> <a href = "{% url 'detail' tech.id%}"> <b>{{tech.title}}</b> </a> </p>
+                    <img class="img-fluid" src="{{ tech.image.url }}" height=200 width=200/>
+                    <p class="card-text pt-3"> {{blog.summary}} </p>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+        <br/>
+        <img src="{% static 'U_C.jpg' %}" class="center"/>
+        <br/>
+    </div>
+
 </main>
 
 <footer class="text-muted">
