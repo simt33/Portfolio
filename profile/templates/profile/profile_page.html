@@ -335,6 +335,25 @@
         color:#7BCFF2; border-left: 3px dotted rgba(123, 207, 242,0.5); padding-left:20px;
         }
 
+    .overview img{
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 30%;
+
+    }
+
+    .overview p{
+
+    margin: auto;
+    display: block;
+    font-size:17px;
+    color:dark grey;
+    text-justify:inter-word;
+    padding-left:10px
+    }
+
     </style>
 
 </head>
@@ -377,20 +396,22 @@
             <br/>
             <h2 class="main-section-header">Welcome!</h2>
             <br/>
-            <div class="container">
+            <div style="width:90%; margin:auto">
                 <div class="row">
-                    <div class ="overview-grid-container">
-                        <div class="grid-child">
-                            <img class="img-fluid" src= "{% static 'Simon_img.jpeg' %}" height=500 width=500 style="border-radius:30%"/>
-                        </div>
-                        <div class="grid-child" style="margin:auto; ">
-                            <p style="font-size:17px;color:dark grey; margin:auto; text-justify:inter-word"><i>
-                                A highly collaborative, proactive and adaptable individual with a broad applied skillset across technology, language and music. Highly proficient in a number of data and development technologies, speaks three languages, plays 6 instruments, with degrees from Durham and Warwick Universities and a successful career history spanning education, recruitment and data.</i>
-                            </p>
+                    <div class="col-xl-4 overview" style="margin-bottom:50px">
+                        <img src= "{% static 'Simon_img.jpeg' %}" height=auto; width=400px; />
+                    </div>
+                    <div class="col-xl-8 overview" style="margin-bottom:50px">
+                        <p><i>
+                            Hi! I’m Simon, and I like to help people solve complex problems. Whether these problems centre around how to best learn complex grammar rules, how to structure a database, or how to find the perfect candidate for a role, I have found success in my career in effectively breaking down complex things into simpler, more manageable things, in collaboration with the people around me. As told by my career history, I’m also a people person through-and-through – I like to work in a team, help others to understand things, and I’m not afraid to ask for help and advice myself, either. I also speak French and Spanish, an aptitude which probably helped me to adapt to learning coding languages such as Python, SQL, and VBA, which I have in turn used throughout my career to solve numerous exciting data challenges, and to improve data systems for the companies I have worked with.
+                            <br/><br/>Outside of technology and language, I am also an avid musician. As well as playing 6 instruments, I have been a hobbyist music producer for the last 20 years using Cubase and FL Studio; whilst in Dubai I even enjoyed a brief stint as a semi-professional DJ and signed House producer. I love videogames, movies, and travel, too. Basically, I like to keep myself very busy!
+                            <br/><br/> Please have a look around the site for more information on my key technical and personal skills, and don’t hesitate to get in touch via email or phone if you’d like a chat.
+                        </i>
+                        </p>
 
-                        </div>
                     </div>
                 </div>
+            </div>
             </div>
             <br/>
 
