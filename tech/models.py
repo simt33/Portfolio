@@ -7,6 +7,8 @@ class TechEntry(models.Model):
     tech_used = models.TextField()
     description = models.TextField()
     image = models.ImageField(upload_to='images')
+    date = models.DateTimeField(auto_now_add=True)
+
 
     def summary(self):
         maxlength = 150
