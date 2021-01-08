@@ -114,6 +114,26 @@ position:relative;
     width: 500px;
 
     }
+
+     @media (max-width: 768px) {
+            .card-tech {
+position:relative;
+    background:#282828;
+    height: auto;
+    width: 95%;
+
+    }
+    .img-tech{
+        object-fit: cover;
+        position: relative;
+
+        width:300px;
+        height:200px;
+        margin:auto;
+        right:0px;
+        bottom:0px
+    }
+
     </style>
 
 </head>
@@ -165,7 +185,7 @@ position:relative;
                             <h4 style="color:white"> <b>{{tech.title}}</b> </h4>
                             <p class="card-text pt-3" style="color:#F07E65"> <b>{{tech.tech_used}}  </b></p>
                             <p class="card-text pt-3" style="color:white"> {{tech.description}}  </p>
-                            <div class="wrapper">
+                            <div class="wrapper" style = "width:80%; margin:auto">
                                 <img class="img-tech rounded" src="{{ tech.image.url }}"/>
                             </div>
                         </div>
