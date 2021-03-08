@@ -59,7 +59,7 @@
 }
 }
 
-      a { color: inherit; }
+
 
       a:hover
 {
@@ -76,6 +76,10 @@
       width: 50%;
 }
 
+.container-carousel {
+width:100%
+}
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -89,6 +93,9 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+        .container-carousel {
+width:75%
+}
       }
       .center {
         display: block;
@@ -96,6 +103,11 @@
         margin-right: auto;
         width: 50%;
     }
+
+        .main-section-header
+        {
+        color:#7BCFF2; border-left: 3px dotted rgba(123, 207, 242,0.5); padding-left:20px; margin-top:40px;margin-bottom:20px
+        }
     </style>
 
 </head>
@@ -130,28 +142,147 @@
 </header>
 
 <main role="main">
+
     <div class="container">
+
+        <br/>
+
+        <div class="jumbotron" style="background: rgba(255,255,255,0.95); padding-top:20px" />
         <h1 class="text-center pt-3">Other Interests</h1>
-        <br/>
-        <br/>
-        <h2>   </h2>
         <hr/>
-        {% for tech in tech_entries.all %}
 
+        <div id="MUSIC" style="width:95%;margin:auto">
+            <h2 class="main-section-header"> Music</h2>
 
-        <div class="row">
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <p class="card-text "> <a href = "{% url 'detail' tech.id%}"> <b>{{tech.title}}</b> </a> </p>
-                    <img class="img-fluid" src="{{ tech.image.url }}" height=200 width=200/>
-                    <p class="card-text pt-3"> {{blog.summary}} </p>
+            <div style="width:95%;margin:auto">
+                <p>
+                    In so many ways, music has always been at the centre of my life, learning various instruments from an early age. Although much of this skill has left me now, I’d still consider myself pretty handy on a piano, saxophone, guitar, bass guitar or drum kit. I’m also an experienced singer, particularly within jazz/soul genres! I’ve performed on various instruments in African Drumming Bands, Big Bands, Samba groups, and even had a brief stint as a keys player for a Soul group! Like everyone, I find it difficult to find the time to practice any of these nowadays, but the passion is still there.
+                    <br/><br/>
+                    Alongside my performance experiences, at the age of 12 I discovered a love of music production and technology. Initially using Cubase as my weapon of choice to produce some fairly embarrassing singer-songwriter albums in my mid-teens, I spent much of my free time at school, and subsequent years, messing around with MIDI, VSTs, and attempting to perfect the twin dark arts of Mixing and Mastering. In 2014, I produced <a href="https://open.spotify.com/album/45soMKsEku2iWbV3qUsfdu">‘The Notagame Collection’</a> – a collection of tracks inspired by my favourite videogame soundtracks, which released in support of the Child’s Play charity. It wasn’t sonically perfect, but in many ways probably one of my most exciting and challenging music projects to date.
+                    <br/><br/>
+                    Finally, in 2017 when living and working in Dubai, I decided to try my hand at DJing (something which fits in very well in the Dubai ecosystem!). What started as a musical exploration and a few <a href = "https://www.mixcloud.com/simoncarrera/">online mixes</a> soon snowballed, and before long I was working semi-professionally at some amazing venues across Dubai and even into Abu Dhabi and Sharjah. Particular highlights included playing a 6-hour open-air NYE gig at Coco, Media One, as well as holding a residency for nearly a year at the always-packed McGettigan’s DWTC. Leveraging my experience in music production, I was even fortunate enough to get 3 of my own House tracks signed with music labels! Whilst my Funky-House-driven DJ career hasn’t quite relaunched yet in quite the same way here in the UK, I still dabble now and then, and it’s something I’d love to get back into, given the time!
+                </p>
+            </div>
+
+            <br/>
+
+            <div>
+                <div class="container container-carousel" >
+                    <div id="carouselOtherInterests" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselOtherInterests" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselOtherInterests" data-slide-to="1"></li>
+                            <li data-target="#carouselOtherInterests" data-slide-to="2"></li>
+                            <li data-target="#carouselOtherInterests" data-slide-to="3"></li>
+                            <li data-target="#carouselOtherInterests" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{% static 'CartoonDJ.png' %}" class="d-block w-100" >
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'ForgetYou.png' %}" class="d-block w-100" >
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'McGetts.png' %}" class="d-block w-100" >
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'Notagame.png' %}" class="d-block w-100" >
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'Cielo.png' %}" class="d-block w-100" >
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselOtherInterests" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselOtherInterests" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <br/>
         </div>
 
-        {% endfor %}
-        <br/>
-        <img src="{% static 'U_C.jpg' %}" class="center"/>
+
+        <div id="LANGUAGE" style="width:95%;margin:auto">
+            <h2 class="main-section-header" >Language</h2>
+            <div style="width:95%;margin:auto">
+                <p>
+                    They say that Music, Maths and Language aptitudes are statistically very strongly linked (primarily due to cognitive pattern-identification abilities), and this proves to be the case for me, for sure! Foreign languages are something I’ve had a strong aptitude in since my youth. Initially at school I studied French and Spanish, before moving to the south of France to study Economie et Gestion (Economics and Management) at the Université de Aix-Marseille for my 3rd year of University (via ERASMUS). It turned out to be formative for me in so many ways, not least moving from proficiency to fluency in French. Following this experience, I decided post-uni to move into languages teaching, specialising in French, Spanish and a bit of German for about 9 years within school in both the UK and the UAE.
+                    <br/><br/>
+                    In 2014 I also spoke at the Language Show London (hosted at the London Olympia) about applications of technologies for effective language learning, in collaboration with various language-learning start-ups and technologists.
+                    <br/><br/>
+                    Currently, I’m fluent in French, very strong in my Spanish and have a working knowledge of some German, too.
+
+                </p>
+                <br/>
+
+            </div>
+
+
+
+        </div>
+
+        <div id="SPORT" style="width:95%;margin:auto">
+            <h2 class="main-section-header">Hobbies and Leisure</h2>
+
+            <div style="width:95%;margin:auto">
+                <p>
+                    In addition to my various musical, language and tech hobbies, I also find plenty of other ways to keep myself entertained; not least a lifelong relationship with videogaming, film and tv - I'm a fairly avid geek by all accounts! I also love to travel; my wife and I have been fortunate to visit so many countries over the last few years (as Dubai is a great travel hub!), and we've been some incredible places.
+                    <br/> <br/>
+                    Very much last on the list is my relationship with sport, which is pretty patchy to say the least! I’m absolutely useless at football, rugby, hockey and most team sports, but I do love a certain few, namely badminton and squash. I am an avid snowboarder, too, following several trips to the Alps, Bulgaria, Andorra and Austria. I also love rock climbing (top roping – I haven’t got the finger grip for bouldering, yet!), and have a long history (as well as fond memories) of with sailing with my dad; I’m a qualified Day Skipper and have sailed a lot of dinghies in my time, too!
+
+                </p>
+                <br/>
+                <div>
+                    <div class="container container-carousel">
+                        <div id="carouselOtherInterests2" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselOtherInterests2" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselOtherInterests2" data-slide-to="1"></li>
+                                <li data-target="#carouselOtherInterests2" data-slide-to="2"></li>
+                                <li data-target="#carouselOtherInterests2" data-slide-to="3"></li>
+                                <li data-target="#carouselOtherInterests2" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{% static 'Skydive.png' %}" class="d-block w-100" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'Japan.png' %}" class="d-block w-100" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'Sailing.png' %}" class="d-block w-100" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'Desert.png' %}" class="d-block w-100" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'Skiing.png' %}" class="d-block w-100" >
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselOtherInterests2" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselOtherInterests2" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+
+            </div>
+
+
+
+        </div>
         <br/>
     </div>
 
