@@ -29,8 +29,15 @@
 
     <style>
 
+
+    :root {
+    --dark:#232323;
+    --light:#F6F6F6;
+
+    }
+
     body {
-        background: url('{% static 'bg_homepage.png' %}') no-repeat center center fixed;
+        background-color: var(--dark);
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -171,10 +178,10 @@ position:relative;
 
 <main role="main">
     <div class="container">
-        <h1 class="text-center pt-3">Technical Projects</h1>
+        <h1 class="text-center pt-3" style="color:var(--light);">Technical Projects</h1>
         <br/>
         <br/>
-        <h2>Recent</h2>
+        <h2 style="color:var(--light);">Recent</h2>
         <hr/>
 
         <div id="tech-skills-cards" class="row">

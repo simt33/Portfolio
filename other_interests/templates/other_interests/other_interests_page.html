@@ -29,8 +29,15 @@
 
     <style>
 
+
+    :root {
+    --dark:#232323;
+    --light:#F6F6F6;
+
+    }
+
     body {
-        background: url('{% static 'bg_homepage.png' %}') no-repeat center center fixed;
+        background-color: var(--dark);
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -106,7 +113,7 @@ width:70%
 
         .main-section-header
         {
-        color:#7BCFF2; border-left: 3px dotted rgba(123, 207, 242,0.5); padding-left:20px; margin-top:40px;margin-bottom:20px
+        color: var(--dark); padding-left:20px; margin-top:40px;margin-bottom:20px
         }
     </style>
 

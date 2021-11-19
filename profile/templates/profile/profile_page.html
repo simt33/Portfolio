@@ -29,6 +29,12 @@
 
     <style>
 
+    :root {
+    --dark:#232323;
+    --light:#F6F6F6;
+
+    }
+
     .bd-placeholder-img
       {
         font-size: 1.125rem;
@@ -62,7 +68,7 @@
 
     body
         {
-        background: url('{% static 'bg_homepage.png' %}') no-repeat center center fixed;
+        background-color: var(--dark);
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -284,15 +290,15 @@
         }
 
     .tech-lg{
-            margin-left:10%; width: 80%; border-right:1px dashed #7BCFF2; border-top:1px dashed #7BCFF2; border-bottom:1px dashed #7BCFF2; border-left: 1px dashed #7BCFF2;
+            margin-left:10%; width: 80%; border-right:1px dashed var(--dark); border-top:1px dashed var(--dark); border-bottom:1px dashed var(--dark); border-left: 1px dashed var(--dark);
             }
 
     .tech-md{
-            margin-left:10%; width: 60%;  border-right:1px dashed #7BCFF2; border-top:1px dashed #7BCFF2; border-bottom:1px dashed #7BCFF2; border-left: 1px dashed #7BCFF2;
+            margin-left:10%; width: 60%;  border-right:1px dashed var(--dark); border-top:1px dashed var(--dark); border-bottom:1px dashed var(--dark); border-left: 1px dashed var(--dark);
             }
 
     .tech-sm{
-            margin-left:10%; width: 40%; border-right:1px dashed #7BCFF2; border-top:1px dashed #7BCFF2; border-bottom:1px dashed #7BCFF2;border-left: 1px dashed #7BCFF2;
+            margin-left:10%; width: 40%; border-right:1px dashed var(--dark); border-top:1px dashed var(--dark); border-bottom:1px dashed var(--dark); border-left: 1px dashed var(--dark);
             }
 
     @media (max-width: 767px){
@@ -332,7 +338,7 @@
 
     .main-section-header
         {
-        color:#7BCFF2; border-left: 3px dotted rgba(123, 207, 242,0.5); padding-left:20px;
+        color:var(--dark); padding-left:20px;
         }
 
     .overview img{
@@ -394,7 +400,7 @@
     <section id="jumbotron" class="jumbotron" style="padding-left:4%; padding-right:4%; padding-top:2%; padding-bottom:3%; width:95%; margin:auto; background: rgba(255,255,255,0.95)">
         <section id="Overview">
             <br/>
-            <h2 class="main-section-header">Welcome!</h2>
+            <h2 class="main-section-header">> __init__.py</h2>
             <br/>
             <div style="width:90%; margin:auto">
                 <div class="row">
@@ -403,9 +409,23 @@
                     </div>
                     <div class="col-xl-8 overview" style="margin-bottom:50px">
                         <p><i>
-                            Hi! I’m Simon, and I like to help people solve complex problems. Whether these problems centre around how to best learn complex grammar rules, how to structure a database, or how to find the perfect candidate for a role, I have found success in my career in effectively breaking down complex things into simpler, more manageable things, in collaboration with the people around me. As told by my career history, I’m also a people person through-and-through – I like to work in a team, help others to understand things, and I’m not afraid to ask for help and advice myself, either. I also speak French and Spanish, an aptitude which probably helped me to adapt to learning coding languages such as Python, SQL, and VBA, which I have in turn used throughout my career to solve numerous exciting development challenges, and to improve data systems for the companies I have worked with.
-                            <br/><br/>Outside of technology and language, I am also an avid musician. As well as playing 6 instruments, I have been a hobbyist music producer for the last 20 years using Cubase and FL Studio; whilst in Dubai I even enjoyed a brief stint as a semi-professional DJ and signed House producer. I love videogames, movies, and travel, too. Basically, I like to keep myself very busy!
-                            <br/><br/> Please have a look around the site for more information on my key technical and personal skills, and don’t hesitate to get in touch via email or phone if you’d like a chat.
+                            Hi! I’m Simon, and I like to help teams to solve complex problems. Whether these problems
+                            centre around developing a robust new API, explaining complex grammar rules, or
+                            finding the perfect candidate for a role, I have found success in my career making
+                            complex things more digestible in collaboration with the
+                            people around me. As told by my career history, I’m also a people person through-and-through
+                            – I like to work in cross-functional teams, where I can both educate and learn from others
+                            around me. I also speak French and Spanish, an aptitude which probably
+                            helped me to adapt to learning coding languages such as Python, C# and SQL, which I have
+                            in turn used throughout my career to solve numerous exciting web- and data-centric
+                            development challenges.
+                            <br/><br/>Outside of technology and language, I am also an avid musician. As well as playing
+                            6 instruments, I have been a hobbyist music producer for the last 20 years using Cubase and
+                            FL Studio; whilst in Dubai I even enjoyed a brief stint as a semi-professional DJ and signed
+                            House producer. I love videogames, movies, and travel, too. Basically, I like to keep myself
+                            very busy!
+                            <br/><br/> Please have a look around the site for more information on my key technical and
+                            personal skills, and don’t hesitate to get in touch via email or phone if you’d like a chat.
                         </i>
                         </p>
 
@@ -427,15 +447,17 @@
 
                         <img src= "{% static 'skill_icon_problem.jpeg' %}" height=50 width=50/>
 
-                        <h4 class="h4-skills">Problem-solving</h4>
-                        <p style="text-align:center;width:80%;">
-                            I excel in breaking down complex problems or concepts, spotting the problems or difficulties, and then rebuilding it better. As a teacher, this was how I was able to convey complex linguistic ideas to students; as a data manager and developer I have used these skills to identify and improve data systems in collaboration with senior managers.
+                        <h4 class="h4-skills">Problem solving</h4>
+                        <p style="text-align:left;width:80%;">
+                            I excel in breaking down complex problems or concepts, spotting the problems or difficulties
+                            , and then rebuilding it better, whilst ensuring logical consistency and accommodating edge
+                            cases.
                         </p>
                         <ul class="ul-skills">
                             <li>A natural innovator with extensive problem-solving skills</li>
                             <li>Highly inquisitive, and motivated by the ‘why’</li>
                             <li>Strong analytical and logical thinking</li>
-                            <li>A history of technical problem-solving, especially within data systems</li>
+                            <li>Advocate of consistent, logical patterns</li>
                         </ul>
                         <br/>
 
@@ -448,15 +470,16 @@
                         <img src= "{% static 'skill_icon_comms.jpeg' %}"  height=50 width=50/>
 
                         <h4 class="h4-skills">Communication</h4>
-                        <p style="text-align:center;width:80%;">
-                            Strong verbal and written communication skills have been the bedrock of my career so far, allowing me to excel in a number of areas such as effective teamwork, leadership, conflict resolution and public speaking.
+                        <p style="text-align:left;width:80%;">
+                            Strong verbal and written communication skills have been the bedrock of my career so far,
+                            allowing me to excel in a number of areas such as effective teamwork, leadership, conflict
+                            resolution and public speaking.
                         </p>
                         <ul class="ul-skills">
                             <li>Skilled in building and maintaining positive relationships; highly collaborative</li>
-                            <li>Excellent presentation skills (verbal and visual)</li>
-                            <li>Confident public speaker</li>
-                            <li>Fluent in French; Strong ability in Spanish</li>
                             <li>Ability to convey technical/complex information to non-technical audience</li>
+                            <li>Fluent in French; Strong ability in Spanish</li>
+                            <li>Confident public speaker</li>
                         </ul>
                         <br/>
                     </div>
@@ -466,14 +489,17 @@
                     <div class ="card card-body align-items-center" style="border:none">
                         <img class="img-fluid" src= "{% static 'skill_icon_growth.jpeg' %}" height=50 width=50/>
                         <h4 class="h4-skills">Learning</h4>
-                        <p style="text-align:center;width:80%;">
-                            I love to learn! It’s one of the things that attracts me to technology so much, and the main reason I originally entered education. I believe that teachers make the best learners, and this has helped me to become very adept at broadening and honing my technical knowledge in a relatively short time.
+                        <p style="text-align:left;width:80%;">
+                            I love to learn! It’s one of the things that attracts me to technology so much, and the main
+                            reason I originally entered education. I believe that teachers make the best learners, and
+                            this has helped me to become very adept at broadening and honing my technical knowledge.
                         </p>
                         <ul class="ul-skills">
                             <li>Highly adaptable self-starter and a proactive learner</li>
                             <li>Very quick in the acquisition of new skills and technologies</li>
-                            <li>T-shaped – I like to know a lot about my specialist areas, but also understand the larger landscape</li>
-                            <li>I fail fast and learn from my mistakes</li>
+                            <li>T-shaped – I like to know a lot about my specialist areas, but also understand the
+                                larger landscape</li>
+                            <li>I fail fast and learn from mistakes when they occur</li>
                         </ul>
                         <br/>
 
@@ -484,13 +510,18 @@
                     <div class ="card card-body align-items-center" style="border:none">
                         <img class="img-fluid" src= "{% static 'skill_icon_leadership.jpeg' %}" height=50 width=50/>
                         <h4 class="h4-skills">Leadership</h4>
-                        <p style="text-align:center;width:80%;">
-                            In addition to my line management experience within education, leading teams of up to 10 in the effective delivery of pastoral programmes, I have also lead individuals in many other ways, from consulting with candidates in recruitment to technical leadership and training in data.
+                        <p style="text-align:left;width:80%;">
+                            In addition to my line management experience within technology, I have also lead many teams
+                            within my career as an educator. I really enjoy making an impact upon others, whether
+                            supporting the continued progression of seasoned professionals, or mentoring those just
+                            starting their career.
+
                         </p>
                         <ul class="ul-skills">
                             <li>Strong leadership abilities; a proactive decision-maker and coach</li>
                             <li>Technical leadership in SQL, Excel, data systems and ATS</li>
-                            <li>Regular coaching and consulting with both candidates and clients within recruitment; teachers, students and parents within education.</li>
+                            <li>Regular coaching and consulting with both candidates and clients within recruitment;
+                                teachers, students and parents within education.</li>
                         </ul>
                         <br/>
 
@@ -507,7 +538,8 @@
                     </div>
                     <div class="grid-child">
                         <a href="https://secure.plum.io/p/KnqjCyW-n5Pv9qbL1Zta4Q" target="_blank" style="color: inherit;">
-                            <p>Want to find out more about my top skills? See this workplace skills assessment from Plum.io for more!</p>
+                            <p>Want to find out more about my top skills? See this workplace skills assessment from
+                                Plum.io for more!</p>
                         </a>
                     </div>
                 </div>
@@ -518,7 +550,7 @@
         <hr/>
         <section id="Education">
             <br/>
-            <h2 class="main-section-header">Education</h2>
+            <h2 class="main-section-header">> education.py</h2>
 
             <br/>
             <div id="content" >
@@ -608,7 +640,7 @@
                     <br/>
 
 
-                    <h2 class="main-section-header">Technical Skills</h2>
+                    <h2 class="main-section-header">> technical_skills.py</h2>
                     <br/>
                     <br/>
                     <div class = "card rounded card-tech tech-lg">
@@ -619,10 +651,12 @@
 
                         </div>
                         <ul>
-                            <li><b>SQL (T-SQL, P-SQL)</b> - Complex queries, Stored Procedures, UDFs, Window functions, Aggregations, Indexing</li>
-                            <li><b>Tableau</b> - Analysing and visualising data, dashboarding, stories</li>
-                            <li><b>Python (Data Analysis)</b> - EDA, structuring and visualisation with Pandas, Numpy, Matplotlib, Seaborn </li>
-                            <li><b>Excel</b> - Calculations, Macros, Pivots</li>
+                            <li><b>Backend Web Development</b> - Python, Django, Flask, Falcon </li>
+                            <li><b>Testing</b> - Writing composable, testable code. Unit testing with unittest and pytest</li>
+                            <li><b>VCS</b> - Version control with git, GitLab and GitHub</li>
+                            <li><b>Agile</b> - Confluence, Jira</li>
+                            <li><b>BASH/MacOS</b></li>
+
                         </ul>
 
                     </div>
@@ -635,13 +669,16 @@
                             <h4>Intermediate</h4>
                         </div>
                         <ul>
+                            <li><b>SQL (T-SQL, P-SQL)</b> - Complex queries, Stored Procedures, UDFs, Window functions,
+                            Aggregations, Indexing</li>
+                            <li><b>Kubernetes & Docker</b> </li>
+                            <li><b>HTML/CSS</b> - Visual web design</li>
                             <li><b>Python (Data Science)</b> - scikit-learn (Linear/Logistic Regression, KNN, Random Forests) </li>
-                            <li><b>Web Development</b> - Django, HTML, CSS </li>
-                            <li><b>Databases</b> - SQL Server, Postgres </li>
-                            <li><b>SSIS</b> - Creating and maintaining ETL packages</li>
+                            <li><b>Python (Data Analysis)</b> - EDA, structuring and visualisation with Pandas, Numpy, Matplotlib, Seaborn </li>
+                            <li><b>Azure</b> - keyvault, azure-cli integration</li>
+                            <li><b>Tableau</b> - Analysing and visualising data, dashboarding, stories</li>
                             <li><b>VBA/VB.Net</b></li>
-                            <li><b>Power BI</b></li>
-                            <li><b>git</b> - version control</li>
+                            <li><b>Excel</b> - Calculations, Macros, Pivots</li>
                         </ul>
                     </div>
 
@@ -656,9 +693,10 @@
 
                         </div>
                         <ul>
+                            <li><b>Javascript</b> - React.js (Learning)</li>
+                            <li><b>Power BI</b></li>
                             <li><b>Kotlin</b> - Android app development </li>
-                            <li><b>BASH scripting</b> - configuration of application servers </li>
-                            <li><b>App deployment</b> - Gunicorn, Nginx </li>
+                            <li><b>SSIS</b> - Creating and maintaining ETL packages</li>
                         </ul>
                     </div>
                     <br/>
