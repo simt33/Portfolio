@@ -30,8 +30,11 @@
     <style>
 
 
-8668
+    :root {
+    --dark:#232323;
+    --light:#F6F6F6;
 
+    }
 
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -128,7 +131,7 @@ body {
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom " style="background-color:#232323">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom " style="background-color:#232323; z-index:999;">
         <a class="navbar-brand" href="{% url 'home' %}">Simon Tunmore</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -158,15 +161,13 @@ body {
 
 <main role="main">
 
-    <div class ="container">
+    <div class="container">
         <div class="center" style="max-width:15%; background: rgba(0, 0, 0, 0.8)" >
 
             <a href="{% url 'profile' %}" style="margin-left: auto;
   margin-right: auto; display:block;">
-                <img  class ="center" src="{% static 'ST_logo.png' %}" height=300 width=300>
+                <img  class="center" src="{% static 'ST_logo_updated.png' %}" height=400 width=400>
             </a>
-
-
 
 
         </div>
@@ -176,6 +177,7 @@ body {
 
 
 </main>
+
 
 <!--<footer class="text-muted" style="height:50px">
     <div class="container text-center">
